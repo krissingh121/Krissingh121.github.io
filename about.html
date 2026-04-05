@@ -6,8 +6,117 @@
     <title>About Us | Greenscape Golf</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* --- GLOBAL & PAGE-SPECIFIC STYLES --- */
+        :root {
+            /* Palette derived from user reference and previous aesthetic */
+            --primary-green: #0F3D2E;
+            --accent-green: #2A9D8F;
+            --text-dark: #2C3E50;
+            --text-muted: #576574;
+            --recycled-white: #FAF9F6;
+            --brown-title: #4B3621; /* Rich brown for "Meet The Team" and names */
+            --section-bg-green: #D2F5EB; /* Thematic light green background from reference */
+        }
+
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.8; color: var(--text-dark); background-color: var(--recycled-white); }
+        h1, h2, h3 { font-family: 'Merriweather', serif; font-weight: 900; }
+        img { max-width: 100%; height: auto; display: block; }
+        
+        .btn { display: inline-block; background-color: var(--accent-green); color: white; padding: 15px 30px; font-weight: 700; border-radius: 50px; border: none; cursor: pointer; }
+        .btn:hover { background-color: #21867A; transform: translateY(-2px); }
+
+        /* Main container for standard content */
+        .page-container { padding: 80px 10%; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+
+        /* --- THE STORY SECTION (FROM PREVIOUS) --- */
+        .about-story h2 { font-size: 2.8rem; margin-bottom: 25px; color: var(--primary-green); }
+        .about-story p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; }
+
+        /* --- MEET THE TEAM SECTION (NEW LAYOUT) --- */
+        .meet-team-section {
+            background-color: var(--section-bg-green);
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .meet-team-section h1 {
+            color: var(--brown-title);
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 70px;
+        }
+
+        /* The main grid for four founders */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Each individual team member card */
+        .team-card {
+            background-color: var(--recycled-white);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .team-card:hover { transform: translateY(-8px); }
+
+        /* Circular face shot with border */
+        .team-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            border: 4px solid #EAEAEA;
+        }
+
+        /* Basic info like name and title */
+        .team-name { color: var(--brown-title); font-size: 1.6rem; margin-bottom: 8px; }
+        .team-title { color: var(--primary-green); font-weight: bold; margin-bottom: 15px; text-transform: capitalize; }
+
+        /* Icon and contact metadata block */
+        .team-card-info { margin-top: auto; }
+
+        .team-meta-icon { margin-bottom: 15px; } /* Space for thematic icon from reference */
+
+        .team-meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .team-meta strong { color: var(--accent-green); }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 1024px) {
+            .grid-2 { grid-template-columns: 1fr; text-align: center; }
+            .about-story img { margin: 0 auto; }
+            .meet-team-section h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .meet-team-section h1 { font-size: 2rem; margin-bottom: 40px; }
+            .team-grid { grid-template-columns: 1fr; }
+            .team-card { padding: 30px; }
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <div class="logo">Greenscape<span class="logo-accent">.</span></div>
         <nav>
@@ -20,30 +129,79 @@
         </nav>
     </header>
 
-    <div class="page-container">
+    <div class="page-container about-story">
         <div class="grid-2">
             <div>
                 <h2>The Greenscape Story</h2>
-                <p>Greenscape Golf began one day after questioning where the golf balls we hit into the woods and waterways go. They end up polluting our environment and courses. </p>
+                <p>Greenscape Golf began on a sunny afternoon in 2023 when our founders were diving for lost balls in a course water hazard. Instead of just finding golf balls, they found thousands of degrading plastic spheres leeching microplastics into the local ecosystem.</p>
                 <p>Realizing that over 300 million golf balls are lost annually in the US alone, we knew we had a social responsibility to act. We combined environmental science with sports engineering to create a business where profit directly funds ecological restoration.</p>
             </div>
             <div>
                 <img src="https://images.unsplash.com/photo-1593111774240-d529f12eb4e6?auto=format&fit=crop&w=1000&q=80" alt="Founders on a golf course">
             </div>
         </div>
+    </div>
 
-        <h2 style="margin-top: 80px; text-align: center; margin-bottom: 40px;">Meet Our Founding Team</h2>
-        <div class="grid-2" style="text-align: center;">
-            <div style="background: var(--recycled-white); padding: 30px; border-radius: 10px;">
-                <h3 style="margin-bottom: 10px;">Jane Doe</h3>
-                <p style="color: var(--accent-green); font-weight: bold;">Co-Founder & Lead Material Scientist</p>
-                <p>With a Ph.D. in Bioplastics, Jane spent 5 years developing the proprietary water-soluble starch compound that makes our cores dissolve harmlessly into the soil.</p>
+    <div class="meet-team-section">
+        <h1>MEET THE TEAM</h1>
+        <div class="team-grid">
+            
+            <div class="team-card">
+                <img src="https://images.canvas.ws/placeholder?height=150&amp;width=150&amp;text=Image+Placeholder&amp;image=image_2.png" alt="Joseph Wong - CEO">
+                <h3 class="team-name">Joseph Wong</h3>
+                <p class="team-title">CEO of Greenscape Golf</p>
+                <div class="team-card-info">
+                    <div class="team-meta-icon">
+                        </div>
+                    <p class="team-meta">
+                        <strong>Email:</strong> jwong@greenscapegolf.com<br>
+                        <strong>Sport of Choice:</strong> Baseball
+                    </p>
+                </div>
             </div>
-            <div style="background: var(--recycled-white); padding: 30px; border-radius: 10px;">
-                <h3 style="margin-bottom: 10px;">John Smith</h3>
-                <p style="color: var(--accent-green); font-weight: bold;">Co-Founder & PGA Professional</p>
-                <p>John ensures that sustainability doesn't compromise playability. He rigorously tests every prototype to guarantee tournament-level spin, carry, and feel.</p>
+            
+            <div class="team-card">
+                <img src="https://images.canvas.ws/placeholder?height=150&amp;width=150&amp;text=Image+Placeholder&amp;image=image_3.png" alt="Kris Singh - Designer">
+                <h3 class="team-name">Kris Singh</h3>
+                <p class="team-title">Designer & Manufacturer</p>
+                <div class="team-card-info">
+                    <div class="team-meta-icon">
+                        </div>
+                    <p class="team-meta">
+                        <strong>Email:</strong> ksingh@greenscapegolf.com<br>
+                        <strong>Sport of Choice:</strong> Golf
+                    </p>
+                </div>
             </div>
+            
+            <div class="team-card">
+                <img src="https://images.canvas.ws/placeholder?height=150&amp;width=150&amp;text=Image+Placeholder&amp;image=image_4.png" alt="Alexander Ke - Ecologist">
+                <h3 class="team-name">Alexander Ke</h3>
+                <p class="team-title">Research Ecologist</p>
+                <div class="team-card-info">
+                    <div class="team-meta-icon">
+                        </div>
+                    <p class="team-meta">
+                        <strong>Email:</strong> ake@greenscapegolf.com<br>
+                        <strong>Sport of Choice:</strong> Sailing
+                    </p>
+                </div>
+            </div>
+            
+            <div class="team-card">
+                <img src="https://images.canvas.ws/placeholder?height=150&amp;width=150&amp;text=Image+Placeholder&amp;image=image_5.png" alt="Angad Sahansra - Financial">
+                <h3 class="team-name">Angad Sahansra</h3>
+                <p class="team-title">Financial Manager</p>
+                <div class="team-card-info">
+                    <div class="team-meta-icon">
+                        </div>
+                    <p class="team-meta">
+                        <strong>Email:</strong> asahansra@greenscapegolf.com<br>
+                        <strong>Sport of Choice:</strong> Tennis
+                    </p>
+                </div>
+            </div>
+            
         </div>
     </div>
 
@@ -51,5 +209,6 @@
         <h2>Greenscape<span class="logo-accent">.</span> Golf</h2>
         <p>&copy; 2026 Greenscape Golf Innovations. Play Responsibly.</p>
     </footer>
+
 </body>
 </html>
