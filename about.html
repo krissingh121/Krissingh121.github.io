@@ -10,12 +10,24 @@
     <style>
         /* --- PAGE-SPECIFIC STYLES --- */
         .page-container { padding: 80px 10%; }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-
-        /* --- THE STORY SECTION --- */
-        .about-story h2 { font-size: 2.8rem; margin-bottom: 25px; color: var(--primary-green); }
-        .about-story p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; }
-        .story-img { border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        
+        /* --- THE STORY SECTION (Centered, No Image) --- */
+        .about-story { 
+            text-align: center; 
+            max-width: 900px; 
+            margin: 0 auto; 
+        }
+        .about-story h2 { 
+            font-size: 2.8rem; 
+            margin-bottom: 25px; 
+            color: var(--primary-green); 
+        }
+        .about-story p { 
+            font-size: 1.1rem; 
+            color: var(--text-muted); 
+            margin-bottom: 20px; 
+            line-height: 1.9;
+        }
 
         /* --- MEET THE TEAM SECTION --- */
         .meet-team-section {
@@ -76,8 +88,7 @@
 
         /* --- MOBILE RESPONSIVENESS --- */
         @media (max-width: 1024px) {
-            .grid-2 { grid-template-columns: 1fr; text-align: center; }
-            .story-img { margin: 0 auto; }
+            .about-story h2 { font-size: 2.4rem; }
             .meet-team-section h2 { font-size: 2.8rem; }
         }
 
@@ -105,16 +116,9 @@
     </header>
 
     <div class="page-container about-story">
-        <div class="grid-2">
-            <div>
-                <h2>The Greenscape Story</h2>
-                <p>Greenscape Golf began on a sunny afternoon in 2023 when our founders were diving for lost balls in a course water hazard. Instead of just finding golf balls, they found thousands of degrading plastic spheres leeching microplastics into the local ecosystem.</p>
-                <p>Realizing that over 300 million golf balls are lost annually in the US alone, we knew we had a social responsibility to act. We combined environmental science with sports engineering to create a business where profit directly funds ecological restoration.</p>
-            </div>
-            <div>
-                <img class="story-img" src="https://images.unsplash.com/photo-1593111774240-d529f12eb4e6?auto=format&fit=crop&w=1000&q=80" alt="Founders on a golf course">
-            </div>
-        </div>
+        <h2>The Greenscape Story</h2>
+        <p>Greenscape Golf began on a sunny afternoon in 2023 when our founders were diving for lost balls in a course water hazard. Instead of just finding golf balls, they found thousands of degrading plastic spheres leeching microplastics into the local ecosystem.</p>
+        <p>Realizing that over 300 million golf balls are lost annually in the US alone, we knew we had a social responsibility to act. We combined environmental science with sports engineering to create a business where profit directly funds ecological restoration.</p>
     </div>
 
     <div class="meet-team-section">
