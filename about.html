@@ -12,44 +12,170 @@
         :root {
             --primary-green: #0F3D2E;
             --accent-green: #2A9D8F;
+            --light-mint: #E0F7FA;
             --text-dark: #2C3E50;
             --text-muted: #576574;
             --recycled-white: #FAF9F6;
             --brown-title: #4B3621;
             --section-bg-green: #D2F5EB;
+            --chart-blue: #4DB6AC;
         }
 
-        body { font-family: 'Montserrat', sans-serif; line-height: 1.8; color: var(--text-dark); background-color: var(--recycled-white); }
-        h1, h2, h3 { font-family: 'Merriweather', serif; font-weight: 900; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.8; color: var(--text-dark); background-color: var(--recycled-white); margin: 0; padding: 0; }
+        h1, h2, h3, h4 { font-family: 'Merriweather', serif; font-weight: 900; }
         img { max-width: 100%; height: auto; display: block; }
         
-        .btn { display: inline-block; background-color: var(--accent-green); color: white; padding: 15px 30px; font-weight: 700; border-radius: 50px; border: none; cursor: pointer; }
+        .btn { display: inline-block; background-color: var(--accent-green); color: white; padding: 15px 30px; font-weight: 700; border-radius: 50px; border: none; cursor: pointer; text-decoration: none; }
         .btn:hover { background-color: #21867A; transform: translateY(-2px); }
+
+        /* --- HEADER & NAVIGATION --- */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-green); font-family: 'Merriweather', serif; }
+        .logo-accent { color: var(--accent-green); }
+        nav ul { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
+        nav a { text-decoration: none; color: var(--text-dark); font-weight: 600; transition: color 0.3s; }
+        nav a:hover { color: var(--accent-green); }
 
         /* Main container for standard content */
         .page-container { padding: 80px 10%; }
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 
+        /* --- HERO SECTION --- */
+        .about-hero {
+            background-color: var(--primary-green);
+            color: white;
+            text-align: center;
+            padding: 100px 5%;
+        }
+        .about-hero h1 { font-size: 3.5rem; margin-bottom: 10px; color: white; }
+        .about-hero p.catchphrase { font-size: 1.5rem; font-style: italic; color: var(--accent-green); font-weight: 600; letter-spacing: 1px; margin-top: 0; }
+
         /* --- THE STORY SECTION --- */
         .about-story h2 { font-size: 2.8rem; margin-bottom: 25px; color: var(--primary-green); }
         .about-story p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; }
+        .story-img { border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
-        /* --- MEET THE TEAM SECTION --- */
-        .meet-team-section {
+        /* --- INFOGRAPHICS / DATA SECTIONS --- */
+        .data-section {
             background-color: var(--section-bg-green);
-            padding: 100px 5%;
+            padding: 80px 5%;
+            text-align: center;
+        }
+        .data-section h2 {
+            color: var(--brown-title);
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 50px;
+        }
+        
+        /* Value Prop & Qualitative Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 60px auto;
+        }
+        .info-card {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 20px;
+            padding: 40px 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .info-card h3 { color: var(--brown-title); font-size: 1.3rem; margin-bottom: 10px; }
+        .info-card .stat { font-size: 2.5rem; font-weight: 900; color: var(--primary-green); margin-bottom: 10px; font-family: 'Merriweather', serif; }
+        .info-card p { color: var(--text-muted); font-size: 1rem; margin: 0; }
+
+        /* Quantitative Chart Section */
+        .chart-container {
+            background-color: var(--recycled-white);
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+        .chart-text-block h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+        .chart-highlight {
+            font-size: 2rem;
+            font-family: 'Merriweather', serif;
+            font-weight: 900;
+            color: var(--brown-title);
+            line-height: 1.3;
+            text-transform: uppercase;
+        }
+        
+        /* CSS Bar Chart */
+        .css-chart {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            height: 250px;
+            border-bottom: 2px solid #ccc;
+            border-left: 2px solid #ccc;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            position: relative;
+        }
+        .y-axis-label {
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+        .bar-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 100%;
+            width: 10%;
+        }
+        .bar {
+            width: 100%;
+            background-color: var(--chart-blue);
+            border-radius: 3px 3px 0 0;
+            transition: height 0.5s ease;
+        }
+        .bar-group:hover .bar { background-color: var(--accent-green); }
+        .x-label {
+            margin-top: 15px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
             text-align: center;
         }
 
-        .meet-team-section h1 {
+        /* --- MEET THE TEAM SECTION --- */
+        .meet-team-section {
+            background-color: var(--recycled-white);
+            padding: 100px 5%;
+            text-align: center;
+        }
+        .meet-team-section h2 {
             color: var(--brown-title);
             font-size: 3.5rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 70px;
         }
-
-        /* The main grid for four founders */
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -57,10 +183,8 @@
             max-width: 1400px;
             margin: 0 auto;
         }
-
-        /* Each individual team member card */
         .team-card {
-            background-color: var(--recycled-white);
+            background-color: white;
             border-radius: 15px;
             padding: 40px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.05);
@@ -70,10 +194,7 @@
             transition: transform 0.3s ease;
             border: 1px solid rgba(0,0,0,0.03);
         }
-
         .team-card:hover { transform: translateY(-8px); }
-
-        /* Circular face shot with border */
         .team-card img {
             width: 150px;
             height: 150px;
@@ -82,34 +203,35 @@
             margin-bottom: 25px;
             border: 4px solid #EAEAEA;
         }
-
-        /* Basic info like name and title */
         .team-name { color: var(--brown-title); font-size: 1.6rem; margin-bottom: 8px; }
         .team-title { color: var(--primary-green); font-weight: bold; margin-bottom: 15px; text-transform: capitalize; }
-
-        /* Icon and contact metadata block */
         .team-card-info { margin-top: auto; }
-        .team-meta-icon { margin-bottom: 15px; }
-
-        .team-meta {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
+        .team-meta { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; }
         .team-meta strong { color: var(--accent-green); }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--primary-green);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        footer h2 { margin-bottom: 10px; }
+        footer p { color: #A0B2A6; font-size: 0.9rem; }
 
         /* --- MOBILE RESPONSIVENESS --- */
         @media (max-width: 1024px) {
             .grid-2 { grid-template-columns: 1fr; text-align: center; }
-            .about-story img { margin: 0 auto; }
-            .meet-team-section h1 { font-size: 2.8rem; }
+            .chart-container { grid-template-columns: 1fr; text-align: center; }
+            .css-chart { margin-top: 30px; }
+            .y-axis-label { left: -10px; top: -20px; transform: none; }
         }
-
         @media (max-width: 768px) {
-            .meet-team-section h1 { font-size: 2rem; margin-bottom: 40px; }
-            .team-grid { grid-template-columns: 1fr; }
+            .data-section h2, .meet-team-section h2 { font-size: 2.2rem; }
+            .about-hero h1 { font-size: 2.5rem; }
+            nav ul { flex-direction: column; gap: 15px; text-align: center; display: none; /* Add hamburger menu logic later if needed */ }
             .team-card { padding: 30px; }
+            .chart-container { padding: 30px 15px; }
         }
     </style>
 </head>
@@ -127,6 +249,11 @@
         </nav>
     </header>
 
+    <div class="about-hero">
+        <h1>About Us</h1>
+        <p class="catchphrase">Greenscape: Play Responsibly.</p>
+    </div>
+
     <div class="page-container about-story">
         <div class="grid-2">
             <div>
@@ -135,13 +262,102 @@
                 <p>Realizing that over 300 million golf balls are lost annually in the US alone, we knew we had a social responsibility to act. We combined environmental science with sports engineering to create a business where profit directly funds ecological restoration.</p>
             </div>
             <div>
-                <img src="https://images.unsplash.com/photo-1593111774240-d529f12eb4e6?auto=format&fit=crop&w=1000&q=80" alt="Founders on a golf course">
+                <img class="story-img" src="https://images.unsplash.com/photo-1593111774240-d529f12eb4e6?auto=format&fit=crop&w=1000&q=80" alt="Founders on a golf course">
+            </div>
+        </div>
+    </div>
+
+    <div class="data-section">
+        <h2>Value Proposition</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Biodegradable Performance</h3>
+            </div>
+            <div class="info-card">
+                <h3>Reduces Long-Term Pollution</h3>
+            </div>
+            <div class="info-card">
+                <h3>Fixes a Frequent Problem</h3>
+            </div>
+            <div class="info-card">
+                <h3>Testing Willingness to Pay</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="data-section" style="background-color: var(--light-mint);">
+        <h2>Survey Results</h2>
+        
+        <!-- Qualitative Results Grid -->
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="stat">16</div>
+                <p>Surveys Conducted</p>
+            </div>
+            <div class="info-card">
+                <div class="stat">6</div>
+                <p>NCAA Division 1 Golf Players</p>
+            </div>
+            <div class="info-card">
+                <h3>Environment</h3>
+                <p>Source of long-lasting plastic pollution</p>
+            </div>
+            <div class="info-card">
+                <h3>Margins</h3>
+                <p>Golf balls can sell for about $60/dozen</p>
+            </div>
+        </div>
+
+        <!-- Quantitative Results Chart -->
+        <h2 style="margin-top: 80px; font-size: 2.5rem;">Survey Results - Quantitative</h2>
+        <div class="chart-container">
+            <div class="chart-text-block">
+                <h3>How much do you spend on golf balls each month? (Dozen)</h3>
+                <div class="chart-highlight">Average cost on a dozen golf balls is about $67 per month.</div>
+            </div>
+            
+            <div class="css-chart">
+                <span class="y-axis-label">Monthly spend (USD)</span>
+                
+                <!-- Bar Heights based on a 130px max (Eugene ~120, Marcus ~20, Charles ~60, Dave ~130, Michael ~100, David ~25, Jahan ~35, Robert ~50) -->
+                <div class="bar-group">
+                    <div class="bar" style="height: 92%;"></div>
+                    <div class="x-label">Eugene</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 15%;"></div>
+                    <div class="x-label">Marcus</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 46%;"></div>
+                    <div class="x-label">Charles</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 100%;"></div>
+                    <div class="x-label">Dave</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 77%;"></div>
+                    <div class="x-label">Michael</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 19%;"></div>
+                    <div class="x-label">David</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 27%;"></div>
+                    <div class="x-label">Jahan</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 38%;"></div>
+                    <div class="x-label">Robert</div>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="meet-team-section">
-        <h1>MEET THE TEAM</h1>
+        <h2>Meet The Team</h2>
         <div class="team-grid">
             
             <div class="team-card">
@@ -149,7 +365,6 @@
                 <h3 class="team-name">Joseph Wong</h3>
                 <p class="team-title">CEO of Greenscape Golf</p>
                 <div class="team-card-info">
-                    <div class="team-meta-icon"></div>
                     <p class="team-meta">
                         <strong>Email:</strong> jwong@greenscapegolf.com<br>
                         <strong>Sport of Choice:</strong> Baseball
@@ -162,7 +377,6 @@
                 <h3 class="team-name">Kris Singh</h3>
                 <p class="team-title">Designer & Manufacturer</p>
                 <div class="team-card-info">
-                    <div class="team-meta-icon"></div>
                     <p class="team-meta">
                         <strong>Email:</strong> ksingh@greenscapegolf.com<br>
                         <strong>Sport of Choice:</strong> Golf
@@ -175,7 +389,6 @@
                 <h3 class="team-name">Alexander Ke</h3>
                 <p class="team-title">Research Ecologist</p>
                 <div class="team-card-info">
-                    <div class="team-meta-icon"></div>
                     <p class="team-meta">
                         <strong>Email:</strong> ake@greenscapegolf.com<br>
                         <strong>Sport of Choice:</strong> Sailing
@@ -188,7 +401,6 @@
                 <h3 class="team-name">Angad Sahansra</h3>
                 <p class="team-title">Financial Manager</p>
                 <div class="team-card-info">
-                    <div class="team-meta-icon"></div>
                     <p class="team-meta">
                         <strong>Email:</strong> asahansra@greenscapegolf.com<br>
                         <strong>Sport of Choice:</strong> Tennis
@@ -201,7 +413,8 @@
 
     <footer>
         <h2>Greenscape<span class="logo-accent">.</span> Golf</h2>
-        <p>&copy; 2026 Greenscape Golf Innovations. Play Responsibly.</p>
+        <p>Play Responsibly.</p>
+        <p>&copy; 2026 Greenscape Golf Innovations.</p>
     </footer>
 
 </body>
