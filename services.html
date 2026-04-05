@@ -6,6 +6,89 @@
     <title>Our Products | Greenscape Golf</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .page-container { padding: 80px 10%; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        
+        /* Infographic Section Styles */
+        .pollution-infographic {
+            background-color: #1A2522; /* Dark, murky green/black */
+            color: #FAF9F6;
+            padding: 70px 5%;
+            border-radius: 20px;
+            margin-top: 60px;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pollution-infographic h2 {
+            color: #FF6B6B; /* Warning red/coral */
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .infographic-subtitle {
+            text-align: center;
+            color: #A0B2A6;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .stat-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 4px;
+            background-color: #FF6B6B;
+            border-radius: 0 0 4px 4px;
+        }
+
+        .stat-number {
+            font-family: 'Merriweather', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .stat-desc {
+            font-size: 1rem;
+            color: #D3DCD7;
+            line-height: 1.6;
+        }
+
+        .stat-highlight {
+            color: #2A9D8F;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            .pollution-infographic h2 { font-size: 2.2rem; }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,27 +106,43 @@
     <div class="page-container">
         <h1 style="text-align: center; margin-bottom: 60px;">Our Sustainable Products</h1>
         
-        <div class="grid-2" style="margin-bottom: 80px;">
-            <img src="https://images.unsplash.com/photo-1622596544062-8e1da48ea5ba?auto=format&fit=crop&w=1000&q=80" alt="Eco-friendly golf balls">
+        <div class="grid-2" style="margin-bottom: 40px;">
+            <img src="https://images.unsplash.com/photo-1622596544062-8e1da48ea5ba?auto=format&fit=crop&w=1000&q=80" alt="Eco-friendly golf balls" style="border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.08);">
             <div>
-                <h2>The Greenscape Pro-Core™ Ball</h2>
-                <p>Our flagship product. A 3-piece tournament-grade golf ball crafted entirely from compressed natural starches, organic polymers, and a specialized biodegradable urethane cover.</p>
-                <ul style="margin-top: 20px; color: var(--text-muted);">
-                    <li>✔️ Dissolves naturally within 6 months of water exposure</li>
-                    <li>✔️ 100% Non-toxic to aquatic and plant life</li>
-                    <li>✔️ Professional compression rating for maximum distance</li>
+                <h2>The Greenscape Bio-Ball</h2>
+                <p>Never feel guilty about a water hazard again. Our flagship product is a 3-piece tournament-grade golf ball crafted entirely from compressed natural starches, organic polymers, and a specialized biodegradable urethane cover.</p>
+                <ul style="margin-top: 20px; color: var(--text-muted); font-size: 1.1rem; line-height: 2;">
+                    <li>✔️ <strong>Dissolves naturally</strong> within 6 months of water exposure.</li>
+                    <li>✔️ <strong>100% Non-toxic</strong> to aquatic and plant life.</li>
+                    <li>✔️ <strong>Professional compression</strong> rating for maximum distance.</li>
                 </ul>
                 <br>
                 <a href="#" class="btn">Order a Sleeve ($15)</a>
             </div>
         </div>
 
-        <div style="background: var(--primary-green); color: white; padding: 50px; border-radius: 15px; text-align: center;">
-            <h2 style="color: white; margin-bottom: 20px;">See The Innovation in Action</h2>
-            <p style="margin-bottom: 30px;">Watch how our balls dissolve completely, leaving zero microplastics.</p>
-            <!-- YouTube Embed Placeholder -->
-            <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Product Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 10px;"></iframe>
+        <div class="pollution-infographic">
+            <h2>The Hidden Cost of Golf</h2>
+            <p class="infographic-subtitle">Traditional golf balls are made of synthetic plastics and heavy metals. When they end up in the rough, lakes, or oceans, they don't just disappear.</p>
+            
+            <div class="stats-container">
+                <div class="stat-box">
+                    <div class="stat-number">300M+</div>
+                    <div class="stat-desc">Golf balls are lost in the United States <span class="stat-highlight">every single year</span>, littering courses and local water systems.</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-number">1,000</div>
+                    <div class="stat-desc">Years it takes for a traditional polyurethane golf ball to decompose, breaking down into harmful <span class="stat-highlight">microplastics</span>.</div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-number">Zero</div>
+                    <div class="stat-desc">The ecological footprint left behind when you choose to play with Greenscape Golf innovations. <span class="stat-highlight">Play responsibly.</span></div>
+                </div>
+            </div>
         </div>
+
     </div>
 
     <footer>
