@@ -31,7 +31,18 @@
         .stat-box { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 40px 30px; position: relative; transition: transform 0.3s; }
         .stat-box:hover { transform: translateY(-5px); }
         .stat-box::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 4px; background-color: #FF6B6B; border-radius: 0 0 4px 4px; }
-        .stat-number { font-family: 'Merriweather', serif; font-size: 3rem; font-weight: 900; color: #FFFFFF; margin-bottom: 10px; line-height: 1; }
+        
+        /* --- FIXED: Font size and overflow handling for long words like Microplastics --- */
+        .stat-number { 
+            font-family: 'Merriweather', serif; 
+            font-size: 2.2rem; /* Reduced from 3rem to ensure 'Microplastics' fits */
+            font-weight: 900; 
+            color: #FFFFFF; 
+            margin-bottom: 10px; 
+            line-height: 1.1; 
+            overflow-wrap: break-word; /* Prevents overflow if it still hits the edge */
+        }
+        
         .stat-desc { font-size: 1rem; color: #D3DCD7; line-height: 1.6; }
         .cite-text { font-size: 0.75rem; opacity: 0.7; }
 
@@ -96,22 +107,22 @@
         <div class="stats-container">
             <div class="stat-box">
                 <div class="stat-number">300M+</div>
-                <div class="stat-desc">An estimated 300 million golf balls are lost or discarded in the United States every year <span class="cite-text"></span>.</div>
+                <div class="stat-desc">An estimated 300 million golf balls are lost or discarded in the United States every year.</div>
             </div>
             
             <div class="stat-box">
                 <div class="stat-number">1,000</div>
-                <div class="stat-desc">It takes between 100 and 1,000 years for traditional golf balls to decompose <span class="cite-text"></span>.</div>
+                <div class="stat-desc">It takes between 100 and 1,000 years for traditional golf balls to decompose.</div>
             </div>
 
             <div class="stat-box">
                 <div class="stat-number">Toxic</div>
-                <div class="stat-desc">During decomposition, balls release high quantities of heavy metals like dangerous levels of zinc into the surrounding flora and fauna <span class="cite-text"></span>.</div>
+                <div class="stat-desc">During decomposition, balls release high quantities of heavy metals like dangerous levels of zinc into the surrounding flora and fauna.</div>
             </div>
             
             <div class="stat-box">
                 <div class="stat-number">Microplastics</div>
-                <div class="stat-desc">Synthetic rubber and plastic polymer covers break down into microplastics that can be ingested by marine life <span class="cite-text"></span>.</div>
+                <div class="stat-desc">Synthetic rubber and plastic polymer covers break down into microplastics that can be ingested by marine life.</div>
             </div>
         </div>
     </div>
