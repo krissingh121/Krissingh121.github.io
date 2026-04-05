@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .form-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-family: 'Montserrat'; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);}
+        input, textarea { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px; font-family: 'Montserrat'; font-size: 1rem; transition: border-color 0.3s;}
+        input:focus, textarea:focus { outline: none; border-color: var(--accent-green); }
+        
+        .contact-box { background: white; padding: 50px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); }
     </style>
 </head>
 <body>
@@ -28,28 +31,24 @@
     </header>
 
     <div class="page-container">
-        <h1 style="text-align: center; margin-bottom: 60px;">Get in Touch</h1>
+        <h1 style="text-align: center; margin-bottom: 60px; color: #4B3621; font-size: 3rem;">Get in Touch</h1>
 
         <div class="grid-2">
-            <div style="background: var(--recycled-white); padding: 40px; border-radius: 10px;">
-                <h2>Contact Information</h2>
-                <p style="margin-bottom: 30px;">Interested in partnering with us or placing a wholesale order? Reach out today.</p>
-                
-                <p><strong>📍 Headquarters:</strong><br>123 Greenway Drive, Suite 400<br>Portland, OR 97204</p><br>
-                <p><strong>📧 Email:</strong><br><a href="mailto:hello@greenscapegolf.com" style="color: var(--accent-green);">hello@greenscapegolf.com</a></p><br>
-                <p><strong>📞 Phone:</strong><br>(555) 019-8472</p><br>
-                
-                <h3 style="margin-top: 20px;">Follow Our Journey</h3>
-                <p style="margin-top: 10px;">
-                    <a href="#" style="color: var(--accent-green); margin-right: 15px;">Instagram</a>
-                    <a href="#" style="color: var(--accent-green); margin-right: 15px;">LinkedIn</a>
-                    <a href="#" style="color: var(--accent-green);">Twitter/X</a>
-                </p>
+            <div>
+                <img src="https://images.unsplash.com/photo-1529900888200-a92dbb3a6c8d?auto=format&fit=crop&w=1000&q=80" alt="Beautiful green golf course" class="rounded-image" style="margin-bottom: 30px;">
+                <div style="padding: 20px;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 15px;">Contact Information</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 25px;">Interested in partnering with us or placing a wholesale order? Reach out today.</p>
+                    
+                    <p style="margin-bottom: 15px;"><strong>📍 Headquarters:</strong><br><span style="color: var(--text-muted);">123 Greenway Drive, Suite 400<br>Portland, OR 97204</span></p>
+                    <p style="margin-bottom: 15px;"><strong>📧 Email:</strong><br><a href="mailto:hello@greenscapegolf.com" style="color: var(--accent-green); font-weight: bold;">hello@greenscapegolf.com</a></p>
+                    <p><strong>📞 Phone:</strong><br><span style="color: var(--text-muted);">(555) 019-8472</span></p>
+                </div>
             </div>
 
-            <div>
-                <h2>Send a Message</h2>
-                <form action="#" method="POST" style="margin-top: 20px;">
+            <div class="contact-box">
+                <h2 style="margin-bottom: 25px;">Send a Message</h2>
+                <form action="#" method="POST">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -60,9 +59,9 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Your Message</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+                        <textarea id="message" name="message" rows="6" required placeholder="How can we help you change the game?"></textarea>
                     </div>
-                    <button type="submit" class="btn">Submit Message</button>
+                    <button type="submit" class="btn" style="width: 100%; margin-top: 10px;">Submit Message</button>
                 </form>
             </div>
         </div>
