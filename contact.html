@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Greenscape Golf</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-family: 'Montserrat'; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Greenscape<span class="logo-accent">.</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services/Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <h1 style="text-align: center; margin-bottom: 60px;">Get in Touch</h1>
+
+        <div class="grid-2">
+            <div style="background: var(--recycled-white); padding: 40px; border-radius: 10px;">
+                <h2>Contact Information</h2>
+                <p style="margin-bottom: 30px;">Interested in partnering with us or placing a wholesale order? Reach out today.</p>
+                
+                <p><strong>📍 Headquarters:</strong><br>123 Greenway Drive, Suite 400<br>Portland, OR 97204</p><br>
+                <p><strong>📧 Email:</strong><br><a href="mailto:hello@greenscapegolf.com" style="color: var(--accent-green);">hello@greenscapegolf.com</a></p><br>
+                <p><strong>📞 Phone:</strong><br>(555) 019-8472</p><br>
+                
+                <h3 style="margin-top: 20px;">Follow Our Journey</h3>
+                <p style="margin-top: 10px;">
+                    <a href="#" style="color: var(--accent-green); margin-right: 15px;">Instagram</a>
+                    <a href="#" style="color: var(--accent-green); margin-right: 15px;">LinkedIn</a>
+                    <a href="#" style="color: var(--accent-green);">Twitter/X</a>
+                </p>
+            </div>
+
+            <div>
+                <h2>Send a Message</h2>
+                <form action="#" method="POST" style="margin-top: 20px;">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h2>Greenscape<span class="logo-accent">.</span> Golf</h2>
+        <p>&copy; 2026 Greenscape Golf Innovations. Play Responsibly.</p>
+    </footer>
+</body>
+</html>
