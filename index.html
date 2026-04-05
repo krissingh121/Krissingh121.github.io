@@ -12,8 +12,8 @@
         .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px auto; }
         .hero-catchphrase { font-size: 1.5rem; font-style: italic; color: var(--accent-green); font-weight: 700; margin-bottom: 20px; display: block;}
         
-        .mission-vision { background: var(--recycled-white); padding: 80px 10%; text-align: center; }
-        .mission-vision h2 { margin-bottom: 30px; font-size: 2.5rem;}
+        .mission-vision { padding: 100px 10%; background-color: white; }
+        .mission-vision h2 { margin-bottom: 30px; font-size: 2.5rem; color: #4B3621;}
         
         /* --- INFOGRAPHICS / DATA SECTIONS --- */
         .data-section { padding: 80px 5%; text-align: center; background-color: #D2F5EB; }
@@ -21,7 +21,8 @@
         .data-section h2 { color: #4B3621; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 50px; }
         
         .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto 60px auto; }
-        .info-card { background: rgba(255, 255, 255, 0.7); border-radius: 20px; padding: 40px 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.03); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+        .info-card { background: rgba(255, 255, 255, 0.9); border-radius: 20px; padding: 40px 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.03); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; transition: transform 0.3s;}
+        .info-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.06); }
         .info-card h3 { color: #4B3621; font-size: 1.3rem; margin-bottom: 10px; }
         .info-card .stat { font-size: 2.5rem; font-weight: 900; color: var(--primary-green); margin-bottom: 10px; font-family: 'Merriweather', serif; }
         .info-card p { color: var(--text-muted); font-size: 1rem; margin: 0; }
@@ -52,11 +53,20 @@
     </div>
 
     <div class="mission-vision">
-        <h2>Our Mission & Vision</h2>
-        <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: var(--text-muted);">
-            <strong>Our Mission:</strong> To eliminate plastic waste on golf courses worldwide by engineering premium, 100% biodegradable golf balls that perform alongside the pros.<br><br>
-            <strong>Our Vision:</strong> A future where every swing leaves behind nothing but a legacy. We envision a golf industry that actively heals the environment, turning global fairways into catalysts for ecological sustainability.
-        </p>
+        <div class="grid-2">
+            <div>
+                <h2>Our Mission & Vision</h2>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px;">
+                    <strong>Our Mission:</strong> To eliminate plastic waste on golf courses worldwide by engineering premium, 100% biodegradable golf balls that perform alongside the pros.
+                </p>
+                <p style="font-size: 1.1rem; color: var(--text-muted);">
+                    <strong>Our Vision:</strong> A future where every swing leaves behind nothing but a legacy. We envision a golf industry that actively heals the environment, turning global fairways into catalysts for ecological sustainability.
+                </p>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1535136123863-7a9172bfdbce?auto=format&fit=crop&w=1000&q=80" alt="Pristine green golf course" class="rounded-image">
+            </div>
+        </div>
     </div>
 
     <div class="data-section">
