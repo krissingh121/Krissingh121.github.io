@@ -13,6 +13,7 @@
         .hero-catchphrase { font-size: 1.5rem; font-style: italic; color: var(--accent-green); font-weight: 700; margin-bottom: 20px; display: block;}
         
         .mission-vision { background: var(--recycled-white); padding: 80px 10%; text-align: center; }
+        .mission-vision h2 { margin-bottom: 30px; font-size: 2.5rem;}
         
         /* --- INFOGRAPHICS / DATA SECTIONS --- */
         .data-section { padding: 80px 5%; text-align: center; background-color: #D2F5EB; }
@@ -24,25 +25,6 @@
         .info-card h3 { color: #4B3621; font-size: 1.3rem; margin-bottom: 10px; }
         .info-card .stat { font-size: 2.5rem; font-weight: 900; color: var(--primary-green); margin-bottom: 10px; font-family: 'Merriweather', serif; }
         .info-card p { color: var(--text-muted); font-size: 1rem; margin: 0; }
-
-        /* Quantitative Chart Section */
-        .chart-container { background-color: var(--recycled-white); border-radius: 20px; padding: 50px; max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: left; }
-        .chart-text-block h3 { font-size: 1.5rem; color: var(--text-dark); margin-bottom: 20px; }
-        .chart-highlight { font-size: 2rem; font-family: 'Merriweather', serif; font-weight: 900; color: #4B3621; line-height: 1.3; text-transform: uppercase; }
-        
-        /* CSS Bar Chart */
-        .css-chart { display: flex; align-items: flex-end; justify-content: space-between; height: 250px; border-bottom: 2px solid #ccc; border-left: 2px solid #ccc; padding-bottom: 10px; padding-left: 10px; position: relative; }
-        .y-axis-label { position: absolute; left: -40px; top: 50%; transform: translateY(-50%) rotate(-90deg); font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; }
-        .bar-group { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; width: 10%; }
-        .bar { width: 100%; background-color: #4DB6AC; border-radius: 3px 3px 0 0; transition: height 0.5s ease; }
-        .bar-group:hover .bar { background-color: var(--accent-green); }
-        .x-label { margin-top: 15px; font-size: 0.75rem; color: var(--text-muted); text-align: center; }
-
-        @media (max-width: 1024px) {
-            .chart-container { grid-template-columns: 1fr; text-align: center; }
-            .css-chart { margin-top: 30px; }
-            .y-axis-label { left: -10px; top: -20px; transform: none; }
-        }
     </style>
 </head>
 <body>
@@ -71,7 +53,7 @@
 
     <div class="mission-vision">
         <h2>Our Mission & Vision</h2>
-        <p style="max-width: 800px; margin: 20px auto 0 auto; font-size: 1.1rem; color: var(--text-muted);">
+        <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: var(--text-muted);">
             <strong>Our Mission:</strong> To eliminate plastic waste on golf courses worldwide by engineering premium, 100% biodegradable golf balls that perform alongside the pros.<br><br>
             <strong>Our Vision:</strong> A future where every swing leaves behind nothing but a legacy. We envision a golf industry that actively heals the environment, turning global fairways into catalysts for ecological sustainability.
         </p>
@@ -116,23 +98,17 @@
             </div>
         </div>
 
-        <h2 style="margin-top: 80px; font-size: 2.2rem;">Quantitative Insights</h2>
-        <div class="chart-container">
-            <div class="chart-text-block">
-                <h3>How much do you spend on golf balls each month? (Dozen)</h3>
-                <div class="chart-highlight">Average cost on a dozen golf balls is about $67 per month.</div>
+        <h2 style="margin-top: 80px; font-size: 2.2rem;">Key Findings</h2>
+        <div class="info-grid" style="max-width: 800px;">
+            <div class="info-card">
+                <div class="stat" style="font-size: 3.5rem;">$67</div>
+                <h3>Average Monthly Spend</h3>
+                <p>On a dozen golf balls</p>
             </div>
-            
-            <div class="css-chart">
-                <span class="y-axis-label">Monthly spend (USD)</span>
-                <div class="bar-group"><div class="bar" style="height: 92%;"></div><div class="x-label">Eugene</div></div>
-                <div class="bar-group"><div class="bar" style="height: 15%;"></div><div class="x-label">Marcus</div></div>
-                <div class="bar-group"><div class="bar" style="height: 46%;"></div><div class="x-label">Charles</div></div>
-                <div class="bar-group"><div class="bar" style="height: 100%;"></div><div class="x-label">Dave</div></div>
-                <div class="bar-group"><div class="bar" style="height: 77%;"></div><div class="x-label">Michael</div></div>
-                <div class="bar-group"><div class="bar" style="height: 19%;"></div><div class="x-label">David</div></div>
-                <div class="bar-group"><div class="bar" style="height: 27%;"></div><div class="x-label">Jahan</div></div>
-                <div class="bar-group"><div class="bar" style="height: 38%;"></div><div class="x-label">Robert</div></div>
+            <div class="info-card">
+                <div class="stat" style="font-size: 3.5rem;">13/16</div>
+                <h3>Environmental Concern</h3>
+                <p>Interviewees explicitly care about impact</p>
             </div>
         </div>
     </div>
