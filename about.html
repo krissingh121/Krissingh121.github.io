@@ -30,15 +30,72 @@
             margin-bottom: 70px;
         }
 
-        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; max-width: 1400px; margin: 0 auto; }
-        .team-card { background-color: white; border-radius: 15px; padding: 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); display: flex; flex-direction: column; align-items: center; transition: transform 0.3s ease; border: 1px solid rgba(0,0,0,0.03); }
+        .team-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 40px; 
+            max-width: 1400px; 
+            margin: 0 auto; 
+        }
+
+        .team-card { 
+            background-color: white; 
+            border-radius: 15px; 
+            padding: 40px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            transition: transform 0.3s ease; 
+            border: 1px solid rgba(0,0,0,0.03); 
+        }
+
         .team-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
-        .team-card img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 25px; border: 4px solid #EAEAEA; }
+        
+        .team-card img { 
+            width: 150px; 
+            height: 150px; 
+            object-fit: cover; 
+            border-radius: 50%; 
+            margin-bottom: 25px; 
+            border: 4px solid #EAEAEA; 
+        }
+
         .team-name { color: #4B3621; font-size: 1.6rem; margin-bottom: 8px; }
         .team-title { color: var(--primary-green); font-weight: bold; margin-bottom: 15px; text-transform: capitalize; }
-        .team-card-info { margin-top: auto; }
-        .team-meta { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; }
+        
+        .team-bio {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .team-card-info { 
+            margin-top: auto; 
+            width: 100%;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .team-meta { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; text-align: left; }
         .team-meta strong { color: var(--accent-green); }
+        
+        .team-socials {
+            margin-top: 15px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .team-socials a {
+            color: var(--primary-green);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .team-socials a:hover { color: var(--accent-green); }
 
         @media (max-width: 768px) {
             .meet-team-section h2 { font-size: 2rem; margin-bottom: 40px; }
@@ -83,11 +140,16 @@
                 <img src="Joseph.jpg" alt="Joseph Wong - CEO">
                 <h3 class="team-name">Joseph Wong</h3>
                 <p class="team-title">CEO of Greenscape Golf</p>
+                <p class="team-bio">Joseph leads the strategic vision for Greenscape, bringing years of leadership experience and a lifelong passion for baseball and environmental conservation.</p>
                 <div class="team-card-info">
                     <p class="team-meta">
                         <strong>Email:</strong> jwong@greenscapegolf.com<br>
-                        <strong>Sport of Choice:</strong> Baseball
+                        <strong>Phone:</strong> (555) 123-4567
                     </p>
+                    <div class="team-socials">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter</a>
+                    </div>
                 </div>
             </div>
             
@@ -95,11 +157,16 @@
                 <img src="Kris.jpg" alt="Kris Singh - Designer">
                 <h3 class="team-name">Kris Singh</h3>
                 <p class="team-title">Designer & Manufacturer</p>
+                <p class="team-bio">Kris is the mastermind behind our biodegradable prototypes, combining high-performance sports engineering with sustainable materials.</p>
                 <div class="team-card-info">
                     <p class="team-meta">
                         <strong>Email:</strong> ksingh@greenscapegolf.com<br>
-                        <strong>Sport of Choice:</strong> Golf
+                        <strong>Phone:</strong> (555) 234-5678
                     </p>
+                    <div class="team-socials">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Portfolio</a>
+                    </div>
                 </div>
             </div>
             
@@ -107,11 +174,16 @@
                 <img src="Alexander.jpg" alt="Alexander Ke - Ecologist">
                 <h3 class="team-name">Alexander Ke</h3>
                 <p class="team-title">Research Ecologist</p>
+                <p class="team-bio">Alexander ensures our products are truly eco-friendly, specializing in the impact of microplastics on aquatic ecosystems and coastal environments.</p>
                 <div class="team-card-info">
                     <p class="team-meta">
                         <strong>Email:</strong> ake@greenscapegolf.com<br>
-                        <strong>Sport of Choice:</strong> Sailing
+                        <strong>Phone:</strong> (555) 345-6789
                     </p>
+                    <div class="team-socials">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">ResearchGate</a>
+                    </div>
                 </div>
             </div>
             
@@ -119,11 +191,16 @@
                 <img src="Angad.jpg" alt="Angad Sahansra - Financial">
                 <h3 class="team-name">Angad Sahansra</h3>
                 <p class="team-title">Financial Manager</p>
+                <p class="team-bio">Angad manages the business's economic health, ensuring that every biodegradable ball sold contributes directly to our environmental restoration goals.</p>
                 <div class="team-card-info">
                     <p class="team-meta">
                         <strong>Email:</strong> asahansra@greenscapegolf.com<br>
-                        <strong>Sport of Choice:</strong> Tennis
+                        <strong>Phone:</strong> (555) 456-7890
                     </p>
+                    <div class="team-socials">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter</a>
+                    </div>
                 </div>
             </div>
             
