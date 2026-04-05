@@ -15,7 +15,27 @@
         .mission-vision { padding: 100px 10%; background-color: white; }
         .mission-vision h2 { margin-bottom: 30px; font-size: 2.5rem; color: #4B3621;}
         
-        /* --- INFOGRAPHICS / DATA SECTIONS --- */
+        /* --- ENVIRONMENTAL IMPACT INFOGRAPHIC --- */
+        .pollution-infographic {
+            background: linear-gradient(rgba(26, 37, 34, 0.9), rgba(26, 37, 34, 0.9)), url('Water_Ball.jpg') center/cover;
+            color: #FAF9F6;
+            padding: 100px 5%;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .pollution-infographic h2 { color: #FF6B6B; font-size: 3rem; margin-bottom: 15px; }
+        .infographic-subtitle { color: #D3DCD7; font-size: 1.2rem; max-width: 600px; margin: 0 auto 60px auto; }
+        .stats-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .stat-box { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 40px 30px; position: relative; transition: transform 0.3s; }
+        .stat-box:hover { transform: translateY(-5px); }
+        .stat-box::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 4px; background-color: #FF6B6B; border-radius: 0 0 4px 4px; }
+        .stat-number { font-family: 'Merriweather', serif; font-size: 3rem; font-weight: 900; color: #FFFFFF; margin-bottom: 10px; line-height: 1; }
+        .stat-desc { font-size: 1rem; color: #D3DCD7; line-height: 1.6; }
+        .cite-text { font-size: 0.75rem; opacity: 0.7; }
+
+        /* --- DATA SECTIONS --- */
         .data-section { padding: 80px 5%; text-align: center; background-color: #D2F5EB; }
         .data-section.alt-bg { background-color: #E0F7FA; }
         .data-section h2 { color: #4B3621; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 50px; }
@@ -65,6 +85,33 @@
             </div>
             <div>
                 <img src="Golf_Course.jpg" alt="Pristine green golf course" class="rounded-image">
+            </div>
+        </div>
+    </div>
+
+    <div class="pollution-infographic">
+        <h2>The Environmental Impact</h2>
+        <p class="infographic-subtitle">The hidden cost of traditional plastic golf balls.</p>
+        
+        <div class="stats-container">
+            <div class="stat-box">
+                <div class="stat-number">300M+</div>
+                <div class="stat-desc">An estimated 300 million golf balls are lost or discarded in the United States every year <span class="cite-text"></span>.</div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-number">1,000</div>
+                <div class="stat-desc">It takes between 100 and 1,000 years for traditional golf balls to decompose <span class="cite-text"></span>.</div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">Toxic</div>
+                <div class="stat-desc">During decomposition, balls release high quantities of heavy metals like dangerous levels of zinc into the surrounding flora and fauna <span class="cite-text"></span>.</div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-number">Microplastics</div>
+                <div class="stat-desc">Synthetic rubber and plastic polymer covers break down into microplastics that can be ingested by marine life <span class="cite-text"></span>.</div>
             </div>
         </div>
     </div>
