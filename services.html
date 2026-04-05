@@ -8,16 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .page-container { padding: 80px 10%; }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         
-        /* Infographic Section Styles */
+        /* UPDATED: Infographic Section Styles with Background Image */
         .pollution-infographic {
-            background-color: #1A2522; /* Dark, murky green/black */
+            background: linear-gradient(rgba(26, 37, 34, 0.9), rgba(26, 37, 34, 0.9)), url('https://images.unsplash.com/photo-1618477461853-cf6ed80fbfc5?auto=format&fit=crop&w=2000&q=80') center/cover;
             color: #FAF9F6;
-            padding: 70px 5%;
+            padding: 100px 5%;
             border-radius: 20px;
             margin-top: 60px;
-            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5), 0 20px 40px rgba(0,0,0,0.1);
             position: relative;
             overflow: hidden;
         }
@@ -25,32 +24,32 @@
         .pollution-infographic h2 {
             color: #FF6B6B; /* Warning red/coral */
             text-align: center;
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 15px;
         }
 
         .infographic-subtitle {
             text-align: center;
-            color: #A0B2A6;
+            color: #D3DCD7;
             font-size: 1.2rem;
             max-width: 600px;
-            margin: 0 auto 50px auto;
+            margin: 0 auto 60px auto;
         }
 
-        .stats-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-        }
+        .stats-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
 
         .stat-box {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 40px 30px;
             text-align: center;
             position: relative;
+            transition: transform 0.3s;
         }
+        
+        .stat-box:hover { transform: translateY(-5px); }
 
         .stat-box::before {
             content: '';
@@ -64,28 +63,11 @@
             border-radius: 0 0 4px 4px;
         }
 
-        .stat-number {
-            font-family: 'Merriweather', serif;
-            font-size: 3.5rem;
-            font-weight: 900;
-            color: #FFFFFF;
-            margin-bottom: 10px;
-            line-height: 1;
-        }
-
-        .stat-desc {
-            font-size: 1rem;
-            color: #D3DCD7;
-            line-height: 1.6;
-        }
-
-        .stat-highlight {
-            color: #2A9D8F;
-            font-weight: bold;
-        }
+        .stat-number { font-family: 'Merriweather', serif; font-size: 3.5rem; font-weight: 900; color: #FFFFFF; margin-bottom: 10px; line-height: 1; }
+        .stat-desc { font-size: 1rem; color: #D3DCD7; line-height: 1.6; }
+        .stat-highlight { color: var(--accent-green); font-weight: bold; }
 
         @media (max-width: 768px) {
-            .grid-2 { grid-template-columns: 1fr; }
             .pollution-infographic h2 { font-size: 2.2rem; }
         }
     </style>
@@ -106,19 +88,19 @@
     </header>
 
     <div class="page-container">
-        <h1 style="text-align: center; margin-bottom: 60px;">Our Sustainable Products</h1>
+        <h1 style="text-align: center; margin-bottom: 60px; color: #4B3621; font-size: 3rem;">Our Sustainable Products</h1>
         
         <div class="grid-2" style="margin-bottom: 40px;">
-            <img src="https://images.unsplash.com/photo-1622596544062-8e1da48ea5ba?auto=format&fit=crop&w=1000&q=80" alt="Eco-friendly golf balls" style="border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.08);">
+            <img src="https://images.unsplash.com/photo-1622596544062-8e1da48ea5ba?auto=format&fit=crop&w=1000&q=80" alt="Eco-friendly golf balls" class="rounded-image">
             <div>
-                <h2>The Greenscape Bio-Ball</h2>
-                <p>Never feel guilty about a water hazard again. Our flagship product is a 3-piece tournament-grade golf ball crafted entirely from compressed natural starches, organic polymers, and a specialized biodegradable urethane cover.</p>
-                <ul style="margin-top: 20px; color: var(--text-muted); font-size: 1.1rem; line-height: 2;">
-                    <li>✔️ <strong>Dissolves naturally</strong> within 6 months of water exposure.</li>
-                    <li>✔️ <strong>100% Non-toxic</strong> to aquatic and plant life.</li>
-                    <li>✔️ <strong>Professional compression</strong> rating for maximum distance.</li>
+                <h2 style="color: var(--primary-green);">The Greenscape Bio-Ball</h2>
+                <p style="margin-top: 15px; color: var(--text-muted);">Never feel guilty about a water hazard again. Our flagship product is a 3-piece tournament-grade golf ball crafted entirely from compressed natural starches, organic polymers, and a specialized biodegradable urethane cover.</p>
+                <ul style="margin-top: 25px; color: var(--text-dark); font-size: 1.1rem; line-height: 2; list-style-type: none;">
+                    <li><strong style="color: var(--accent-green);">✓</strong> <strong>Dissolves naturally</strong> within 6 months of water exposure.</li>
+                    <li><strong style="color: var(--accent-green);">✓</strong> <strong>100% Non-toxic</strong> to aquatic and plant life.</li>
+                    <li><strong style="color: var(--accent-green);">✓</strong> <strong>Professional compression</strong> rating for maximum distance.</li>
                 </ul>
-                <br>
+                <br><br>
                 <a href="#" class="btn">Order a Sleeve ($15)</a>
             </div>
         </div>
@@ -144,7 +126,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <footer>
