@@ -3,471 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greenscape Golf | Pro-Performance, Zero Footprint</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    
+    <title>Home | Greenscape Golf</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* --- PROFESSIONAL CSS VARIABLES & RESET --- */
-        :root {
-            /* Primary Greens - Deeper and richer */
-            --primary-green: #0F3D2E;
-            --accent-green: #2A9D8F;
-            --hover-green: #21867A;
-            /* Earth Tones - Warm and organic */
-            --earth-sand: #E9E1D3; /* Main background */
-            --recycled-white: #FAF9F6; /* Card backgrounds */
-            --text-dark: #2C3E50;
-            --text-muted: #576574;
-            --text-light: #FFFFFF;
-            /* Utility */
-            --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            --shadow-light: 0 4px 6px rgba(0,0,0,0.05);
-            --shadow-medium: 0 10px 20px rgba(0,0,0,0.08);
-        }
-
-        /* Basic Reset */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; font-size: 16px; }
-
-        body {
-            background-color: var(--earth-sand);
-            color: var(--text-dark);
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.8;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Merriweather', serif;
-            color: var(--primary-green);
-            font-weight: 900;
-        }
-
-        a { text-decoration: none; color: inherit; transition: var(--transition-smooth); }
-        ul { list-style: none; }
-        img { max-width: 100%; height: auto; display: block; }
-
-        /* --- GLOBAL COMPONENTS --- */
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-green);
-            color: var(--text-light);
-            padding: 16px 36px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 1rem;
-            border-radius: 50px;
-            border: 2px solid transparent;
-            cursor: pointer;
-            box-shadow: var(--shadow-light);
-        }
-
-        .btn:hover {
-            background-color: var(--hover-green);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-medium);
-        }
-
-        /* Clean Section Spacing */
-        section { padding: 100px 5% ; }
-
-        /* --- HEADER / NAV --- */
-        header {
-            background-color: rgba(250, 249, 246, 0.95); /* Recycled White slightly transparent */
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.03);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(5px);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: var(--primary-green);
-            letter-spacing: -0.5px;
-        }
-
-        .logo-accent { color: var(--accent-green); }
-
-        nav ul { display: flex; gap: 35px; }
-        
-        nav a {
-            font-weight: 500;
-            color: var(--text-dark);
-            font-size: 0.95rem;
-            position: relative;
-        }
-
-        nav a:hover { color: var(--accent-green); }
-
-        /* Subtle underline effect on hover */
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--accent-green);
-            transition: var(--transition-smooth);
-        }
-
-        nav a:hover::after { width: 100%; }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            /* Replace with a premium shot of a ball lying perfectly on dew-covered grass */
-            background: linear-gradient(rgba(15, 61, 46, 0.85), rgba(15, 61, 46, 0.7)), 
-                        url('https://images.unsplash.com/photo-1593111774240-d529f12eb4e6?q=80&w=2070&auto=format&fit=crop') center/cover;
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--text-light);
-            padding: 0 10%;
-        }
-
-        .hero-content { max-width: 900px; }
-
-        .hero h1 {
-            color: var(--text-light);
-            font-size: 4rem; /* Massive, confident headline */
-            line-height: 1.1;
-            margin-bottom: 25px;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            font-weight: 400;
-            max-width: 700px;
-            margin: 0 auto 40px auto;
-            opacity: 0.9;
-        }
-
-        /* --- INNOVATION SECTION (Cards) --- */
-        .innovation h2 { text-align: center; font-size: 2.8rem; margin-bottom: 70px; }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .feature-card {
-            background: var(--recycled-white);
-            padding: 50px 40px;
-            border-radius: 15px;
-            box-shadow: var(--shadow-light);
-            transition: var(--transition-smooth);
-            border: 1px solid rgba(0,0,0,0.03);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-medium);
-            border-color: var(--accent-green);
-        }
-
-        .icon-container {
-            width: 70px;
-            height: 70px;
-            background-color: rgba(42, 157, 143, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-
-        .feature-icon {
-            width: 35px;
-            height: 35px;
-            fill: var(--accent-green); /* SVG icons use fill */
-        }
-
-        .feature-card h3 { font-size: 1.6rem; margin-bottom: 15px; }
-        
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 1rem;
-        }
-
-        /* --- THE SCIENCE SECTION (NEW PROFESSIONAL ADDITION) --- */
-        .science {
-            background-color: var(--primary-green);
-            color: var(--text-light);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 80px;
-            padding: 100px 10%;
-        }
-
-        .science h2 { color: var(--text-light); font-size: 2.8rem; margin-bottom: 25px; }
-        
-        .science p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 20px;
-            color: var(--recycled-white);
-        }
-
-        .science-image {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow-medium);
-            /* Focus: An extreme macro shot, perhaps showing the texture or a cross-section */
-            background: url('https://images.unsplash.com/photo-1622596544062-8e1da48ea5ba?q=80&w=1000') center/cover;
-            height: 500px;
-        }
-
-        /* --- SERVICES (Clean Layout) --- */
-        .services h2 { text-align: center; font-size: 2.8rem; margin-bottom: 70px; }
-
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 50px;
-        }
-
-        .card {
-            background: var(--recycled-white);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow-light);
-            transition: var(--transition-smooth);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover { box-shadow: var(--shadow-medium); }
-
-        .card-img-wrapper {
-            height: 280px;
-            overflow: hidden;
-        }
-
-        .card-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition-smooth);
-        }
-
-        .card:hover .card-img { transform: scale(1.05); } /* Subtle zoom on hover */
-
-        .card-content { padding: 40px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;}
-
-        .card-content h3 { font-size: 1.6rem; margin-bottom: 15px; }
-        
-        .card-content p { color: var(--text-muted); margin-bottom: 25px; flex-grow: 1;}
-
-        .card-link {
-            font-weight: 700;
-            color: var(--accent-green);
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .card-link:hover { color: var(--primary-green); }
-
-        /* --- FOOTER (Dark & Professional) --- */
-        footer {
-            background-color: var(--primary-green);
-            color: var(--text-light);
-            padding: 80px 10%;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 50px;
-        }
-
-        .footer-logo h2 { color: var(--text-light); margin-bottom: 10px; }
-        
-        .footer-logo p { opacity: 0.7; font-size: 0.9rem; max-width: 300px; }
-
-        .footer-nav-group h4 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--accent-green);
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-        }
-
-        .footer-nav-group ul { display: flex; flex-direction: column; gap: 12px; }
-        
-        .footer-nav-group a { opacity: 0.8; font-size: 0.95rem; }
-        
-        .footer-nav-group a:hover { opacity: 1; color: var(--accent-green); }
-
-        .copyright {
-            grid-column: 1 / -1;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 40px;
-            margin-top: 20px;
-            font-size: 0.85rem;
-            opacity: 0.5;
-        }
-
-        /* --- MOBILE RESPONSIVENESS (Refined) --- */
-        @media (max-width: 1024px) {
-            .hero h1 { font-size: 3rem; }
-            .science { grid-template-columns: 1fr; gap: 50px; padding: 70px 5%;}
-            .science-image { height: 400px; }
-        }
-
-        @media (max-width: 768px) {
-            html { font-size: 14px; }
-            header { flex-direction: column; gap: 15px; padding: 15px; }
-            nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
-            .hero { padding: 0 5%; }
-            .hero h1 { font-size: 2.5rem; }
-            .hero p { font-size: 1.1rem; }
-            section { padding: 60px 5%; }
-            .features-grid, .cards-container { grid-template-columns: 1fr; }
-            .science-image { height: 300px; }
-            footer { grid-template-columns: 1fr; text-align: center; padding: 50px 5%; }
-            .footer-logo p { margin: 0 auto; }
-            .footer-nav-group ul { align-items: center; }
-        }
+        .hero { background: linear-gradient(rgba(15, 61, 46, 0.7), rgba(15, 61, 46, 0.8)), url('https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=2000&q=80') center/cover; height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
+        .hero h1 { color: white; font-size: 3.5rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px auto; }
+        .mission-vision { background: var(--recycled-white); padding: 80px 10%; text-align: center; }
+        .mission-vision h2 { margin-bottom: 30px; font-size: 2.5rem;}
     </style>
 </head>
 <body>
-
     <header>
         <div class="logo">Greenscape<span class="logo-accent">.</span></div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#innovation">Why Bio-Tech</a></li>
-                <li><a href="#science">The Science</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services/Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Pro-Performance.<br>Zero Footprint.</h1>
-            <p>Introducing the world's first tournament-grade, fully biodegradable golf ball. Keep your focus on the game, we'll focus on the planet.</p>
-            <button class="btn">Explore the Innovation</button>
+    <div class="hero">
+        <div>
+            <h1>Welcome to the Green Revolution</h1>
+            <p>We are a social business dedicated to transforming the golf industry. Pro-performance, zero footprint. Keep your focus on the game, we'll focus on the planet.</p>
+            <a href="services.html" class="btn">Explore Our Products</a>
         </div>
-    </section>
+    </div>
 
-    <section id="innovation" class="innovation">
-        <h2>Engineered for the Conscious Golfer</h2>
-        <div class="features-grid">
-            
-            <div class="feature-card">
-                <div class="icon-container">
-                    <svg class="feature-icon" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm-62.1-155.1l7.1-12.2c12-20.7 34.1-33.3 58-33.3h3.1c16.6 0 30-13.4 30-30v-10c0-11.1 9.1-20 20-20h50c11.1 0 20 9.1 20 20v24c0 13.3-10.7 24-24 24h-16c-13.3 0-24 10.7-24 24v4c0 8.8-7.2 16-16 16h-42.7c-7.1 0-13.8 3.7-17.7 9.8L208.7 339c-2.9 4.6-1.5 10.6 3.1 13.5s10.6 1.5 13.5-3.1l17.7-27.4c11.9-18.4 32.2-29.5 54.2-29.5h42.7c16.6 0 30 13.4 30 30v11.1c0 11.1-9.1 20-20 20h-6c-11.1 0-20 9.1-20 20v10c0 16.6-13.4 30-30 30H208c-16.6 0-30-13.4-30-30v-30c0-11.1-9.1-20-20-20h-10c-11.1 0-20 9.1-20 20V420c0 13.3-10.7 24-24 24h-12c-13.3 0-24-10.7-24-24v-64c0-11.1 9.1-20 20-20h10c11.1 0 20-9.1 20-20V328c0-8.8 7.2-16 16-16zm182.1-95.6l10.8-18.6c4.6-7.9 14.8-10.6 22.7-6l10.8 6.3c7.9 4.6 10.6 14.8 6 22.7l-10.8 18.6c-4.6 7.9-14.8 10.6-22.7 6l-10.8-6.3c-8-4.6-10.6-14.8-6-22.7z"/></svg>
-                </div>
-                <h3>Trace-Free Biodegradability</h3>
-                <p>Dissolves naturally within months, not centuries. Leaves zero microplastics, ensuring the course remains pristine for the next generation.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="icon-container">
-                    <svg class="feature-icon" viewBox="0 0 512 512"><path d="M493.4 319.4c-11.1-1.3-22.3-1.4-33.5-.1L352.5 329c-30.8 3.1-61 14.7-87.8 33.7V96c0-17.7-14.3-32-32-32s-32 14.3-32 32v266.7c-26.8-19-57.1-30.6-87.8-33.7l-107.4-9.8c-11.1-1.3-22.3-1.2-33.5.1C21.7 322.2 8 339.7 8 359.8c0 23.4 20.3 41.5 43.6 38.8l107.4-9.8c23-2.1 45.6 5.3 64.9 19.9V448c0 17.7 14.3 32 32 32s32-14.3 32-32V408.8c19.3-14.6 41.9-21.9 64.9-19.9l107.4 9.8c23.2 2.7 43.6-15.5 43.6-38.8 0-20.1-13.7-37.6-34.1-40.5zM128 256c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64S64 28.7 64 64v128c0 35.3 28.7 64 64 64zm256-64c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64s-64 28.7-64 64v128c0 35.3 28.7 64 64 64z"/></svg>
-                </div>
-                <h3>Advanced Organic Core</h3>
-                <p>Proprietary blend of organic polymers and compressed natural minerals. We replace petro-chemicals without sacrificing the "click" and feel golfers demand.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="icon-container">
-                    <svg class="feature-icon" viewBox="0 0 512 512"><path d="M480 96H288L192 16H32C14.3 16 0 30.3 0 48v416c0 17.7 14.3 32 32 32s32-14.3 32-32V256h288l96 80 96-80h16c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32zM320 224H64V128h256l64 32-64 64z"/></svg>
-                </div>
-                <h3>Tournament-Ready Flight</h3>
-                <p>Tested under professional conditions for distance, spin control, and durability. Achieve the same carry and accuracy as traditional premium balls.</p>
-            </div>
-        </div>
-    </section>
+    <div class="mission-vision">
+        <h2>Our Mission & Vision</h2>
+        <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: var(--text-muted);">
+            <strong>Our Mission:</strong> To eliminate plastic waste on golf courses worldwide by engineering premium, 100% biodegradable golf balls that perform alongside the pros.<br><br>
+            <strong>Our Vision:</strong> A future where every swing leaves behind nothing but a legacy. We envision a golf industry that actively heals the environment, turning global fairways into catalysts for ecological sustainability.
+        </p>
+    </div>
 
-    <section id="science" class="science">
-        <div class="science-text">
-            <h2>The Science Behind the Swing</h2>
-            <p>Traditional golf balls use polybutadiene—a synthetic rubber that can take over 1,000 years to decompose. Greenscape changes the game.</p>
-            <p>We leverage cutting-edge material science to create a core from compressed starches and organic binders. The outer shell is a specialized, tough biopolymer designed to withstand 120+ mph swing speeds, yet activate its decomposition cycle when exposed to soil moisture and microbes.</p>
-            <p>It’s not just a ball; it’s an engineering marvel designed for the game you love and the planet you live on.</p>
-        </div>
-        <div class="science-image">
-            </div>
-    </section>
-
-    <section id="services" class="services">
-        <h2>Corporate & Course Partners</h2>
-        <div class="cards-container">
-            
-            <div class="card">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1593111774641-f5b9d3e75066?q=80&w=1000" alt="Sustainable Golf Ball Box" class="card-img">
-                </div>
-                <div class="card-content">
-                    <div>
-                        <h3>Monthly Subscription</h3>
-                        <p>Never worry about running low. Get professional-grade biodegradable balls delivered to your door or pro shop monthly.</p>
-                    </div>
-                    <a href="#" class="card-link">Configure Your Plan &rarr;</a>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1622596544062-8e1da48ea5ba?q=80&w=1000" alt="Corporate Branded Golf Ball" class="card-img">
-                </div>
-                <div class="card-content">
-                    <div>
-                        <h3>Corporate & Tournament Branding</h3>
-                        <p>Show your company’s commitment to sustainability. We offer custom logo printing using eco-friendly, water-based inks.</p>
-                    </div>
-                    <a href="#" class="card-link">Get a Custom Quote &rarr;</a>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="footer-logo">
-            <h2>Greenscape<span class="logo-accent">.</span> Golf</h2>
-            <p>Pro-Performance, Zero Footprint. Sustainably Professional.</p>
-        </div>
-        
-        <div class="footer-nav-group">
-            <h4>Explore</h4>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#innovation">Why Bio-Tech</a></li>
-                <li><a href="#science">The Science</a></li>
-                <li><a href="#services">Services</a></li>
-            </ul>
-        </div>
-        
-        <div class="footer-nav-group">
-            <h4>Company</h4>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Read Our Blog</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Support</a></li>
-            </ul>
-        </div>
-        
-        <p class="copyright">&copy; 2026 Greenscape Golf Innovations. Play Responsibly. Patent Pending.</p>
+    <footer>
+        <h2>Greenscape<span class="logo-accent">.</span> Golf</h2>
+        <p>&copy; 2026 Greenscape Golf Innovations. Play Responsibly.</p>
     </footer>
-
 </body>
 </html>
