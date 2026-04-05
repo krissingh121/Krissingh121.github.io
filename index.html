@@ -32,15 +32,15 @@
         .stat-box:hover { transform: translateY(-5px); }
         .stat-box::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 4px; background-color: #FF6B6B; border-radius: 0 0 4px 4px; }
         
-        /* --- FIXED: Font size and overflow handling for long words like Microplastics --- */
+        /* --- FIXED: Single line forced for 'Microplastics' --- */
         .stat-number { 
             font-family: 'Merriweather', serif; 
-            font-size: 2.2rem; /* Reduced from 3rem to ensure 'Microplastics' fits */
+            font-size: 1.9rem; /* Further reduced size */
             font-weight: 900; 
             color: #FFFFFF; 
             margin-bottom: 10px; 
             line-height: 1.1; 
-            overflow-wrap: break-word; /* Prevents overflow if it still hits the edge */
+            white-space: nowrap; /* Forces text to stay on a single line */
         }
         
         .stat-desc { font-size: 1rem; color: #D3DCD7; line-height: 1.6; }
@@ -61,120 +61,120 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="Logo.jpg" alt="Greenscape Golf Official Logo">
+        <div class=\"logo\">
+            <img src=\"Logo.jpg\" alt=\"Greenscape Golf Official Logo\">
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services/Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href=\"index.html\">Home</a></li>
+                <li><a href=\"about.html\">About Us</a></li>
+                <li><a href=\"services.html\">Services/Products</a></li>
+                <li><a href=\"contact.html\">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="hero">
+    <div class=\"hero\">
         <div>
-            <span class="hero-catchphrase">Greenscape: Play Responsibly.</span>
+            <span class=\"hero-catchphrase\">Greenscape: Play Responsibly.</span>
             <h1>Welcome to the Green Revolution</h1>
             <p>We are a social business dedicated to transforming the golf industry. Pro-performance, zero footprint. Keep your focus on the game, we'll focus on the planet.</p>
-            <a href="services.html" class="btn">Explore Our Products</a>
+            <a href=\"services.html\" class=\"btn\">Explore Our Products</a>
         </div>
     </div>
 
-    <div class="mission-vision">
-        <div class="grid-2">
+    <div class=\"mission-vision\">
+        <div class=\"grid-2\">
             <div>
                 <h2>Our Mission & Vision</h2>
-                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px;">
+                <p style=\"font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px;\">
                     <strong>Our Mission:</strong> To eliminate plastic waste on golf courses worldwide by engineering premium, 100% biodegradable golf balls that perform alongside the pros.
                 </p>
-                <p style="font-size: 1.1rem; color: var(--text-muted);">
+                <p style=\"font-size: 1.1rem; color: var(--text-muted);\">
                     <strong>Our Vision:</strong> A future where every swing leaves behind nothing but a legacy. We envision a golf industry that actively heals the environment, turning global fairways into catalysts for ecological sustainability.
                 </p>
             </div>
             <div>
-                <img src="Golf_Course.jpg" alt="Pristine green golf course" class="rounded-image">
+                <img src=\"Golf_Course.jpg\" alt=\"Pristine green golf course\" class=\"rounded-image\">
             </div>
         </div>
     </div>
 
-    <div class="pollution-infographic">
+    <div class=\"pollution-infographic\">
         <h2>The Environmental Impact</h2>
-        <p class="infographic-subtitle">The hidden cost of traditional plastic golf balls.</p>
+        <p class=\"infographic-subtitle\">The hidden cost of traditional plastic golf balls.</p>
         
-        <div class="stats-container">
-            <div class="stat-box">
-                <div class="stat-number">300M+</div>
-                <div class="stat-desc">An estimated 300 million golf balls are lost or discarded in the United States every year.</div>
+        <div class=\"stats-container\">
+            <div class=\"stat-box\">
+                <div class=\"stat-number\">300M+</div>
+                <div class=\"stat-desc\">An estimated 300 million golf balls are lost or discarded in the United States every year.</div>
             </div>
             
-            <div class="stat-box">
-                <div class="stat-number">1,000</div>
-                <div class="stat-desc">It takes between 100 and 1,000 years for traditional golf balls to decompose.</div>
+            <div class=\"stat-box\">
+                <div class=\"stat-number\">1,000</div>
+                <div class=\"stat-desc\">It takes between 100 and 1,000 years for traditional golf balls to decompose.</div>
             </div>
 
-            <div class="stat-box">
-                <div class="stat-number">Toxic</div>
-                <div class="stat-desc">During decomposition, balls release high quantities of heavy metals like dangerous levels of zinc into the surrounding flora and fauna.</div>
+            <div class=\"stat-box\">
+                <div class=\"stat-number\">Toxic</div>
+                <div class=\"stat-desc\">During decomposition, balls release high quantities of heavy metals like dangerous levels of zinc into the surrounding flora and fauna.</div>
             </div>
             
-            <div class="stat-box">
-                <div class="stat-number">Microplastics</div>
-                <div class="stat-desc">Synthetic rubber and plastic polymer covers break down into microplastics that can be ingested by marine life.</div>
+            <div class=\"stat-box\">
+                <div class=\"stat-number\">Microplastics</div>
+                <div class=\"stat-desc\">Synthetic rubber and plastic polymer covers break down into microplastics that can be ingested by marine life.</div>
             </div>
         </div>
     </div>
 
-    <div class="data-section">
+    <div class=\"data-section\">
         <h2>Value Proposition</h2>
-        <div class="info-grid">
-            <div class="info-card">
+        <div class=\"info-grid\">
+            <div class=\"info-card\">
                 <h3>Biodegradable Performance</h3>
             </div>
-            <div class="info-card">
+            <div class=\"info-card\">
                 <h3>Reduces Long-Term Pollution</h3>
             </div>
-            <div class="info-card">
+            <div class=\"info-card\">
                 <h3>Fixes a Frequent Problem</h3>
             </div>
-            <div class="info-card">
+            <div class=\"info-card\">
                 <h3>Testing Willingness to Pay</h3>
             </div>
         </div>
     </div>
 
-    <div class="data-section alt-bg">
+    <div class=\"data-section alt-bg\">
         <h2>Survey Results</h2>
-        <div class="info-grid">
-            <div class="info-card">
-                <div class="stat">16</div>
+        <div class=\"info-grid\">
+            <div class=\"info-card\">
+                <div class=\"stat\">16</div>
                 <p>Surveys Conducted</p>
             </div>
-            <div class="info-card">
-                <div class="stat">6</div>
+            <div class=\"info-card\">
+                <div class=\"stat\">6</div>
                 <p>NCAA Division 1 Golf Players</p>
             </div>
-            <div class="info-card">
+            <div class=\"info-card\">
                 <h3>Environment</h3>
                 <p>Source of long-lasting plastic pollution</p>
             </div>
-            <div class="info-card">
+            <div class=\"info-card\">
                 <h3>Margins</h3>
                 <p>Golf balls can sell for about $60/dozen</p>
             </div>
         </div>
 
-        <h2 style="margin-top: 80px; font-size: 2.2rem;">Key Findings</h2>
-        <div class="info-grid" style="max-width: 800px;">
-            <div class="info-card">
-                <div class="stat" style="font-size: 3.5rem;">$67</div>
+        <h2 style=\"margin-top: 80px; font-size: 2.2rem;\">Key Findings</h2>
+        <div class=\"info-grid\" style=\"max-width: 800px;\">
+            <div class=\"info-card\">
+                <div class=\"stat\" style=\"font-size: 3.5rem;\">$67</div>
                 <h3>Average Monthly Spend</h3>
                 <p>On a dozen golf balls</p>
             </div>
-            <div class="info-card">
-                <div class="stat" style="font-size: 3.5rem;">13/16</div>
+            <div class=\"info-card\">
+                <div class=\"stat\" style=\"font-size: 3.5rem;\">13/16</div>
                 <h3>Environmental Concern</h3>
                 <p>Interviewees explicitly care about impact</p>
             </div>
@@ -182,7 +182,7 @@
     </div>
 
     <footer>
-        <h2>Greenscape<span class="logo-accent">.</span> Golf</h2>
+        <h2>Greenscape<span class=\"logo-accent\">.</span> Golf</h2>
         <p>&copy; 2026 Greenscape Golf Innovations. Play Responsibly.</p>
     </footer>
 </body>
